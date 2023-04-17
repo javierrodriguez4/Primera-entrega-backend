@@ -4,7 +4,7 @@ const port = 8080;
 const path = require('path');
 const ProductManager = require('./ProductManager');
 
-const products = new ProductManager(path.resolve(__dirname, 'products.json'));
+const products = new ProductManager(path.resolve(__dirname, 'data','products.json'));
 
 app.use(express.json());
 
