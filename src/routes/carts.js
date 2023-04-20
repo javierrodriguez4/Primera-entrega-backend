@@ -1,9 +1,10 @@
+const path = require("path");
 const express = require("express");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 const router = express.Router();
 
-const FILE_PATH = "./carrito.json";
+const FILE_PATH = path.resolve(__dirname, '..', 'data','carts.json');
 
 router.post("/", (req, res) => {
   const newCart = {

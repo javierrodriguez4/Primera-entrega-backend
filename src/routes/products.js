@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const ProductManager = require('../ProductManager');
+const path = require('path');
 
-const products = new ProductManager('./productos.txt');
+
+const products = new ProductManager(path.resolve(__dirname, '..', 'data','products.json'));
 
 // Obtener todos los productos
 router.get('/', async (req, res) => {
